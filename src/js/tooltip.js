@@ -34,13 +34,15 @@
      */
     simpleTooltip.prototype.init = function()
     {
-
+        if (!this.hasTooltip()) {
+            this.addTooltip();
+        }
     };
 
     simpleTooltip.prototype.addTooltip = function()
     {
         $(this.element).wrap('<div class="tooltip-container"></div>');
-        $(this.element).parent().append('<div class="tooltip '+this.options.class+'">'+this.options.content+'</div>');
+        $(this.element).parent().append('<div class="tooltip '+this.options.classes+'">'+this.options.content+'</div>');
     };
 
     simpleTooltip.prototype.removeTooltip = function()
