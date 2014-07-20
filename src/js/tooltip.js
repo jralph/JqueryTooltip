@@ -66,7 +66,7 @@
             return false;
         }
 
-        $('.tooltip', container)[this.options.inAnimation](inAnimationSpeed);
+        $('.tooltip', container)[this.options.inAnimation](this.options.inAnimationSpeed);
     };
 
     simpleTooltip.prototype.hideTooltip = function()
@@ -77,7 +77,7 @@
 
         var container = $(this.element).parent();
 
-        $('.tooltip', container)[this.options.outAnimation](outAnimationSpeed);
+        $('.tooltip', container)[this.options.outAnimation](this.options.outAnimationSpeed);
     };
 
     simpleTooltip.prototype.toggleTooltip = function()
